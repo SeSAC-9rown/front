@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>성장일지 상세 - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/pages/diary.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="diary diary-detail">
+        <!-- Date Navigation Header -->
+        <header class="diary-header">
+            <a href="#" class="nav-arrow nav-prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+
+            <div class="date-display">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="calendar-icon">
+                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <span class="date-text">2025. 11. 28</span>
+            </div>
+
+            <a href="#" class="nav-arrow nav-next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </header>
+
+        <!-- Main Content -->
+        <div class="diary-content detail-content">
+            <!-- Title Section -->
+            <div class="detail-header">
+                <h1 class="detail-title">치피의 모습</h1>
+            </div>
+
+            <div class="plant-image-container">
+                <img src="../../images/diary/plant-basil-new.png" alt="바질 사진" class="plant-image">
+            </div>
+
+            <!-- Growth Status Cards -->
+            <div class="status-cards">
+                <!-- Growth Stage Card -->
+                <div class="status-card stage-card">
+                    <div class="card-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="card-icon">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                stroke="#7cb342" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h3 class="card-title">성장 단계</h3>
+                    </div>
+                    <div class="stage-display">
+                        <div class="stage-number">3단계</div>
+                        <div class="stage-progress">
+                            <div class="progress-dash active"></div>
+                            <div class="progress-dash active"></div>
+                            <div class="progress-dash active"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Growth Speed Card -->
+                <div class="status-card speed-card">
+                    <div class="card-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="card-icon">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#7cb342" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <h3 class="card-title">성장 속도</h3>
+                    </div>
+                    <div class="speed-info">
+                        <p class="speed-context">2일전 마지막<br>치피 모습 대비</p>
+                        <p class="speed-result">10% 자랐어요</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Alert -->
+            <div class="health-alert warning">
+                <div class="alert-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                        <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                        <circle cx="12" cy="16" r="1" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="alert-content">
+                    <h4 class="alert-title">잎에서 병해충이 의심됩니다</h4>
+                    <p class="alert-description">잎에 갈색 반점이 보여요. 병든 잎은 바로 떼어내고, 주의 너무 습하지 않게 관리해주세요. 햇빛이 잘 들고 통풍이 좋은 곳에
+                        두세요.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="list.html" class="nav-item active">
+                <img class="nav-icon" src="../../images/common/icons/nav-diary.svg" alt="성장일지">
+                <div class="nav-label">성장일지</div>
+            </a>
+            <a href="../home/day.html" class="nav-item">
+                <img class="nav-icon" src="../../images/common/icons/nav-home.svg" alt="홈">
+                <div class="nav-label">홈</div>
+            </a>
+            <a href="../mypage/index.html" class="nav-item">
+                <img class="nav-icon" src="../../images/common/icons/nav-mypage.svg" alt="마이페이지">
+                <div class="nav-label">마이페이지</div>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -8,20 +8,17 @@
 }
 
 body {
-  background-color: var(--color-bg-primary);
+  background-color: #3D4F3E;
+  /* Fallback */
+  background: linear-gradient(180deg, #3D4F3E 0%, #2D3E2E 50%, #1F2E20 100%);
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-/* Intro Page Body Override */
-body:has(.onboarding-intro) {
-  background: linear-gradient(180deg, #3D4F3E 0%, #2D3E2E 50%, #1F2E20 100%);
-}
-
 .onboarding-page {
   height: 100vh;
-  background-color: var(--color-bg-primary);
+  background: transparent;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -481,9 +478,11 @@ body:has(.onboarding-intro) {
     opacity: 0;
     transform: scale(0.5);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -708,10 +707,7 @@ body:has(.onboarding-intro) {
 }
 
 /* ===== CHIPI BIRTH PAGE SPECIFIC ===== */
-.chipi-birth-page,
-.chipi-greeting-page {
-  background: linear-gradient(180deg, #3D4F3E 0%, #2D3E2E 50%, #1F2E20 100%);
-}
+
 
 .chipi-birth-content,
 .chipi-greeting-content {
@@ -785,54 +781,50 @@ body:has(.onboarding-intro) {
 /* ===== ANIMATIONS ===== */
 @keyframes fade-in {
   0% {
-    opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
-    opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes slide-up {
   0% {
-    opacity: 0;
     transform: translateY(29vw);
   }
-  40% {
-    opacity: 1;
-  }
+
   100% {
-    opacity: 1;
     transform: translateY(11vh);
   }
 }
 
 @keyframes bounce-in {
   0% {
-    opacity: 0;
     transform: scale(0.3);
   }
+
   50% {
     transform: scale(1.08);
   }
+
   70% {
     transform: scale(0.95);
   }
+
   100% {
-    opacity: 1;
     transform: scale(1);
   }
 }
 
 .fade-in {
-  animation: fade-in 0.8s ease-out forwards;
+  animation: fade-in 0.6s ease-out forwards;
 }
 
 .slide-up {
-  animation: slide-up 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: slide-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 .bounce-in {
-  animation: bounce-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: bounce-in 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
